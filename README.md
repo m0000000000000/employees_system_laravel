@@ -11,4 +11,6 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
  
- ## You can preview this project on http://employees-system-laravel.herokuapp.com/dashboard
+ ## You can preview this project on http://employees-system-laravel.herokuapp.com/dashboard 
+ ### email : admin@admin.com
+ ### password : 12345678
