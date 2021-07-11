@@ -19,6 +19,26 @@ class CreateCountriesTable extends Migration
             $table->char('name');
             $table->timestamps();
         });
+//        =============================
+        Schema::create('states', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->foreignId('country_id')->constrained();
+            $table->timestamps();
+        });
+//        =========================
+        Schema::create('cities', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->foreignId('state_id')->constrained();
+            $table->timestamps();
+        });
+//        ==========================
+        Schema::create('departments', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -29,5 +49,8 @@ class CreateCountriesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('countries');
+        Schema::dropIfExists('states');
+        Schema::dropIfExists('cities');
+        Schema::dropIfExists('departments');
     }
 }
